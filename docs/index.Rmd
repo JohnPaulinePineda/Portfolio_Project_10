@@ -2941,7 +2941,7 @@ BTREE_Test_ROC <- roc(response = BTREE_Test$BTREE_Observed,
 |      **[A.2]** RF: Random Forest (<mark style="background-color: #CCECFF">**randomForest**</mark> package)
 |             **[A.2.1]** Cross-Validation ROC Curve AUC = 0.96507, Test ROC Curve AUC = 0.98207 
 |      **[A.3]** BTREE: Bagged Trees (<mark style="background-color: #CCECFF">**ipred**</mark>, <mark style="background-color: #CCECFF">**plyr**</mark> and <mark style="background-color: #CCECFF">**e1071**</mark> packages)
-|             **[A.2.1]** Cross-Validation ROC Curve AUC = 0.95881, Test ROC Curve AUC = 0.97528 
+|             **[A.3.1]** Cross-Validation ROC Curve AUC = 0.95881, Test ROC Curve AUC = 0.97528 
 |
 ```{r section_1.6, warning=FALSE, message=FALSE}
 ##################################
