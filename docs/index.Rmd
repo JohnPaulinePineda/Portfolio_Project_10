@@ -2038,6 +2038,8 @@ AVNN_Test_ROC <- roc(response = AVNN_Test$AVNN_Observed,
 
 ###  1.5.8 Support Vector Machine - Radial Basis Function Kernel (SVM_R)
 |
+| [Support Vector Machine](http://www.cs.cmu.edu/~pakyan/compbio/references/Drucker_NIPS_1996.pdf) plots each observation in an N-dimensional space corresponding to the number of features in the data set and finds a hyperplane that maximally separates the different classes by a maximally large margin (which is defined as the distance between the hyperplane and the closest data points from each class). The algorithm applies kernel transformation by mapping non-linearly separable data using the similarities between the points in a high-dimensional feature space for improved discrimination.
+|
 | **[A]** The support vector machine (radial basis function kernel) model from the  <mark style="background-color: #CCECFF">**kernlab**</mark> package was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
 | **[B]** The model contains 2 hyperparameters:
@@ -2148,6 +2150,8 @@ SVM_R_Test_ROC <- roc(response = SVM_R_Test$SVM_R_Observed,
 ```
 
 ###  1.5.9 Support Vector Machine - Polynomial Kernel (SVM_P)
+|
+| [Support Vector Machine](http://www.cs.cmu.edu/~pakyan/compbio/references/Drucker_NIPS_1996.pdf) plots each observation in an N-dimensional space corresponding to the number of features in the data set and finds a hyperplane that maximally separates the different classes by a maximally large margin (which is defined as the distance between the hyperplane and the closest data points from each class). The algorithm applies kernel transformation by mapping non-linearly separable data using the similarities between the points in a high-dimensional feature space for improved discrimination.
 |
 | **[A]** The support vector machine (polynomial kernel) model from the  <mark style="background-color: #CCECFF">**kernlab**</mark> package was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
@@ -2374,6 +2378,8 @@ KNN_Test_ROC <- roc(response = KNN_Test$KNN_Observed,
 
 ###  1.5.11 Classification and Regression Trees (CART)
 |
+| [Classification and Regression Trees](https://www.semanticscholar.org/paper/Classification-and-Regression-Trees-Breiman-Friedman/8017699564136f93af21575810d557dba1ee6fc6) constructs binary trees for both both nominal and continuous input attributes using Gini Index as its splitting criteria. The algorithm handles missing values by surrogating tests to approximate outcomes. In the pruning phase, CART uses pre-pruning technique called Cost-Complexity pruning to remove redundant branches from the decision tree to improve the accuracy. In the first stage, a sequence of increasingly smaller trees are built on the training data. In the second stage, one of these tree is chosen as the pruned tree, based on its classification accuracy on a pruning set, adopting a cross-validated method in its pruning technique.
+|
 | **[A]** The classification and regression trees model from the  <mark style="background-color: #CCECFF">**rpart**</mark> package was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
 | **[B]** The model contains 1 hyperparameter:
@@ -2597,6 +2603,8 @@ CTREE_Test_ROC <- roc(response = CTREE_Test$CTREE_Observed,
 
 ###  1.5.13 C5.0 Decision Trees (C50)
 |
+| [C5.0 Decision Trees](https://link.springer.com/article/10.1007/BF00993309) generates multi-branch trees in a situation where one or more nominal inputs are given, using an information-based criterion (Entropy and Information Gain) as an attribute selection measure to build decision trees. For overfitting avoidance, the algorithm applies a pessimistic pruning approach called Rule-post pruning, to remove unreliable branches from the decision tree to reduce the size of the tree without any loss of its predictive accuracy. The Rule-post pruning starts off by converting a decision tree to an equivalent set of rules, then based on statistical confidence estimations for error rate it evaluates the rules with the aim of simplifying them without affecting the accuracy, adopting the Binomial Confidence Limit method. In a case of handling missing values, the algorithm allows to whether estimate missing values as a function of other attributes or apportions the case probabilistically among the results.
+|
 | **[A]** The C5.0 decision trees model from the  <mark style="background-color: #CCECFF">**C50**</mark> and <mark style="background-color: #CCECFF">**plyr**</mark> packages was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
 | **[B]** The model contains 3 hyperparameters:
@@ -2714,6 +2722,8 @@ C50_Test_ROC <- roc(response = C50_Test$C50_Observed,
 
 ###  1.5.14 Random Forest (RF)
 |
+| [Random Forest](https://link.springer.com/article/10.1023/A:1010933404324) is an ensemble learning method made up of a large set of small decision trees called estimators, with each producing its own prediction. The random forest model aggregates the predictions of the estimators to produce a more accurate prediction. The algorithm involves bootstrap aggregating (where smaller subsets of the training data are repeatedly subsampled with replacement), random subspacing (where a subset of features are sampled and used to train each individual estimator), estimator training (where unpruned decision trees are formulated for each estimator) and inference by aggregating the predictions of all estimators.
+|
 | **[A]** The random forest model from the  <mark style="background-color: #CCECFF">**randomForest**</mark> package was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
 | **[B]** The model contains 1 hyperparameter:
@@ -2824,6 +2834,8 @@ RF_Test_ROC <- roc(response = RF_Test$RF_Observed,
 ```
 
 ###  1.5.15 Bagged Trees (BTREE)
+|
+| [Bagged Trees](https://link.springer.com/article/10.1007/BF00058655) combine bootstrapping and decision trees to construct an ensemble. The modeling process involves generating bootstrap samples of the original data, training an unpruned decision tree for each bootstrap subset of the data and implementing an ensemble voting for all the individual decision tree predictions to formulate the final prediction. The bootstrap aggregation (bagging) mechanism improves the model performance by reducing variance. Although the individual decision trees in the model are identically distributed, they are not necessarily independent and share similar structure. This similarity, known as tree correlation, is an essential factor that prevents further reduction of variance.
 |
 | **[A]** The bagged trees model from the <mark style="background-color: #CCECFF">**ipred**</mark>, <mark style="background-color: #CCECFF">**plyr**</mark> and <mark style="background-color: #CCECFF">**e1071**</mark> packages was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
@@ -3060,6 +3072,11 @@ print(ROCCurveAUC_Summary, row.names=FALSE)
 | **[Article]** [Generalized Boosting Model](https://support.bccvl.org.au/support/solutions/articles/6000083212-generalized-boosting-model) by BCCVL Team
 | **[Article]** [C5.0: An Informal Tutorial](https://www.rulequest.com/see5-unix.html) by RuleQuest Team
 | **[Article]** [What is Nearest Shrunken Centroid Classification?](https://www.tibshirani.su.domains/PAM/Rdist/howwork.html) by Rob Tibshirani
+| **[Publication]** [Support Vector Regression Machines](http://www.cs.cmu.edu/~pakyan/compbio/references/Drucker_NIPS_1996.pdf) by Harris Drucker, Chris Burges, Linda Kaufman, Alex Smola and Vladimir Vapnik (Advances in Neural Information Processing Systems)
+| **[Publication]** [Classification and Regression Trees](https://www.semanticscholar.org/paper/Classification-and-Regression-Trees-Breiman-Friedman/8017699564136f93af21575810d557dba1ee6fc6) by Leo Breiman, Jerome Friedman, Richard Olshen, and Charles Stone (Computer Science)
+| **[Publication]** [C4.5: Programs for Machine Learning](https://link.springer.com/article/10.1007/BF00993309) by Ross Quinlan
+| **[Publication]** [Random Forest ](https://link.springer.com/article/10.1023/A:1010933404324) by Leo Breiman (Machine Learning)
+| **[Publication]** [Bagging Predictors](https://link.springer.com/article/10.1007/BF00058655) by Leo Breiman (Machine Learning)
 | **[Course]** [Applied Data Mining and Statistical Learning](https://online.stat.psu.edu/stat508/) by Penn State Eberly College of Science
 | **[Course]** [Regression Methods](https://online.stat.psu.edu/stat501/) by Penn State Eberly College of Science
 | **[Course]** [Applied Regression Analysis](https://online.stat.psu.edu/stat462/) by Penn State Eberly College of Science
