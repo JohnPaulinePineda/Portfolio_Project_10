@@ -1268,6 +1268,8 @@ EDA.Bar.Source.FactorVar.Prop.Group1 <- rbind(EDA.PropTable.Function(names(EDA.B
 ## 1.5 Predictive Model Development
 ###  1.5.1 Logistic Regression (LR)
 |
+| [Logistic Regression](http://dx.doi.org/10.2139/ssrn.360300) models the relationship between the probability of an event (among two outcome levels) by having the log-odds of the event be a linear combination of a set of predictors weighted by their respective parameter estimates. The parameters are estimated via maximum likelihood estimation by testing different values through multiple iterations to optimize for the best fit of log odds. All of these iterations produce the log likelihood function, and logistic regression seeks to maximize this function to find the best parameter estimates. Given the optimal parameters, the conditional probabilities for each observation can be calculated, logged, and summed together to yield a predicted probability.
+|
 | **[A]** The logistic regression model from the  <mark style="background-color: #CCECFF">**stats**</mark> package was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
 | **[B]** The model does not contain any hyperparameter.
@@ -3076,6 +3078,7 @@ print(ROCCurveAUC_Summary, row.names=FALSE)
 | **[Article]** [Generalized Boosting Model](https://support.bccvl.org.au/support/solutions/articles/6000083212-generalized-boosting-model) by BCCVL Team
 | **[Article]** [C5.0: An Informal Tutorial](https://www.rulequest.com/see5-unix.html) by RuleQuest Team
 | **[Article]** [What is Nearest Shrunken Centroid Classification?](https://www.tibshirani.su.domains/PAM/Rdist/howwork.html) by Rob Tibshirani
+| **[Publication]** [The Origins of Logistic Regression](http://dx.doi.org/10.2139/ssrn.360300) by JS Cramer (Econometrics eJournal)
 | **[Publication]** [The Use of Multiple Measurements in Taxonomic Problems](https://www.semanticscholar.org/paper/THE-USE-OF-MULTIPLE-MEASUREMENTS-IN-TAXONOMIC-Fisher/ab21376e43ac90a4eafd14f0f02a0c87502b6bbf) by Ronald Fisher (Annals of Human Genetics)
 | **[Publication]** [Support Vector Regression Machines](http://www.cs.cmu.edu/~pakyan/compbio/references/Drucker_NIPS_1996.pdf) by Harris Drucker, Chris Burges, Linda Kaufman, Alex Smola and Vladimir Vapnik (Advances in Neural Information Processing Systems)
 | **[Publication]** [Classification and Regression Trees](https://www.semanticscholar.org/paper/Classification-and-Regression-Trees-Breiman-Friedman/8017699564136f93af21575810d557dba1ee6fc6) by Leo Breiman, Jerome Friedman, Richard Olshen, and Charles Stone (Computer Science)
