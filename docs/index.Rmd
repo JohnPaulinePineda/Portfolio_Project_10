@@ -2497,6 +2497,8 @@ CART_Test_ROC <- roc(response = CART_Test$CART_Observed,
 
 ###  1.5.12 Conditional Inference Trees (CTREE)
 |
+| [Conditional Inference Trees](https://www.tandfonline.com/doi/abs/10.1198/106186006X133933) uses recursive partitioning of dependent variables based on the value of correlations in  conditional inference framework - compensating against overfitting and a selection bias towards features with many possible splits or missing values thus avoiding biasing and vulnerability to the errors making it more flexible for the problems in the data. The algorithm applies a significance test which is a permutation test that selects input features to split and recurse, calculating the p-value in the process. The distribution of the test statistic under the null hypothesis is obtained by calculating all possible values of the test statistic under rearrangements of the classes on the observed data points.
+|
 | **[A]** The conditional inference trees model from the  <mark style="background-color: #CCECFF">**party**</mark> package was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
 | **[B]** The model contains 1 hyperparameter:
@@ -3076,6 +3078,7 @@ print(ROCCurveAUC_Summary, row.names=FALSE)
 | **[Article]** [Artificial Neural Network](https://support.bccvl.org.au/support/solutions/articles/6000083200-artificial-neural-network) by BCCVL Team
 | **[Article]** [Generalized Linear Model](https://support.bccvl.org.au/support/solutions/articles/6000083213-generalized-linear-model) by BCCVL Team
 | **[Article]** [Generalized Boosting Model](https://support.bccvl.org.au/support/solutions/articles/6000083212-generalized-boosting-model) by BCCVL Team
+| **[Article]** [Conditional Inference Trees in R Programming](https://www.geeksforgeeks.org/conditional-inference-trees-in-r-programming/) by Geeks for Geeks Team
 | **[Article]** [C5.0: An Informal Tutorial](https://www.rulequest.com/see5-unix.html) by RuleQuest Team
 | **[Article]** [What is Nearest Shrunken Centroid Classification?](https://www.tibshirani.su.domains/PAM/Rdist/howwork.html) by Rob Tibshirani
 | **[Publication]** [The Origins of Logistic Regression](http://dx.doi.org/10.2139/ssrn.360300) by JS Cramer (Econometrics eJournal)
