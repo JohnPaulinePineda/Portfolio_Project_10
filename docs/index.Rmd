@@ -1488,6 +1488,8 @@ LDA_Test_ROC <- roc(response = LDA_Test$LDA_Observed,
 
 ###  1.5.3 Flexible Discriminant Analysis (FDA)
 |
+| [Flexible Discriminant Analysis](https://www.tandfonline.com/doi/abs/10.1080/01621459.1994.10476866), as a flexible extension of the linear discriminant analysis, uses optimal scoring to transform the response variable so that the data are in a better form for linear separation, and multiple adaptive regression splines to generate the discriminant surface. The algorithm is useful to model multivariate non-normality or non-linear relationships among variables within each group, allowing for a more accurate classification.
+|
 | **[A]** The flexible discriminant analysis model from the  <mark style="background-color: #CCECFF">**earth**</mark> and  <mark style="background-color: #CCECFF">**mda**</mark> packages was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
 | **[B]** The model contains 2 hyperparameters:
@@ -1600,6 +1602,8 @@ FDA_Test_ROC <- roc(response = FDA_Test$FDA_Observed,
 ```
 
 ###  1.5.4 Mixture Discriminant Analysis (MDA)
+|
+| [Mixture Discriminant Analysis](https://rss.onlinelibrary.wiley.com/doi/10.1111/j.2517-6161.1996.tb02073.x), as an improvement to the restrictions of the linear discriminant analysis towards having all classes comes from a single normal (or Gaussian) distribution, applies the assumption that each class is a Gaussian mixture of sub-classes. The algorithm treats each data point as having the probability of belonging to each class. Equality of covariance matrix among classes, is still assumed.
 |
 | **[A]** The mixture discriminant analysis model from the  <mark style="background-color: #CCECFF">**mda**</mark> package was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
