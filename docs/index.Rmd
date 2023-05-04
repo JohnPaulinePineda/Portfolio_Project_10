@@ -1803,6 +1803,10 @@ NB_Test_ROC <- roc(response = NB_Test$NB_Observed,
 
 ###  1.5.6 Nearest Shrunken Centroids (NSC)
 |
+| [Nearest Shrunken Centroids](https://pubmed.ncbi.nlm.nih.gov/12011421/) involve first summarizing the training dataset into a set of centroids, then using the centroids to make predictions for new instances. The algorithm shrinks the centroids of each input variable towards the centroid of the entire training data set. Those variables that are shrunk down to the value of the data centroid can then be removed as they do not help to discriminate between the class labels. The centroids in the input feature space are different for each target label which then represents the model. Given new instances, the distance between a given row of data and each centroid is calculated and the closest centroid is used to assign a class label to the example.
+
+As such, the amount of shrinkage applied to the centroids is a hyperparameter that can be tuned for the dataset and used to perform an automatic form of feature selection. Thus, it is appropriate for a dataset with a large number of input variables, some of which may be irrelevant or noisy..
+|
 | **[A]** The nearest shrunken centroids model from the  <mark style="background-color: #CCECFF">**pamr**</mark> package was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
 | **[B]** The model contains 1 hyperparameter:
@@ -2279,7 +2283,7 @@ SVM_P_Test_ROC <- roc(response = SVM_P_Test$SVM_P_Observed,
 
 ###  1.5.10 K-Nearest Neighbors (KNN)
 |
-| [K-Nearest Neighbors](https://ieeexplore.ieee.org/document/1053964) uses proximity to make predictions about the class grouping of an individual data point. The algorithm examines the labels of a chosen number of data points surrounding a target data point given a distance-based similarity metric, in order to make a prediction about the class that the data point falls into. The process involves setting a value for the chosen number of neighbors, calculating the distance between the target point across all instances, sorting the calculated distances, obtaining the labels of the top entries and returning the prediction for the target point.
+| [K-Nearest Neighbors](https://ieeexplore.ieee.org/document/1053964) use proximity to make predictions about the class grouping of an individual data point. The algorithm examines the labels of a chosen number of data points surrounding a target data point given a distance-based similarity metric, in order to make a prediction about the class that the data point falls into. The process involves setting a value for the chosen number of neighbors, calculating the distance between the target point across all instances, sorting the calculated distances, obtaining the labels of the top entries and returning the prediction for the target point.
 |
 | **[A]** The k-nearest neighbors model was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
@@ -3092,6 +3096,7 @@ print(ROCCurveAUC_Summary, row.names=FALSE)
 | **[Publication]** [The Use of Multiple Measurements in Taxonomic Problems](https://www.semanticscholar.org/paper/THE-USE-OF-MULTIPLE-MEASUREMENTS-IN-TAXONOMIC-Fisher/ab21376e43ac90a4eafd14f0f02a0c87502b6bbf) by Ronald Fisher (Annals of Human Genetics)
 | **[Publication]** [Flexible Discriminant Analysis by Optimal Scoring](https://www.tandfonline.com/doi/abs/10.1080/01621459.1994.10476866) by Trevor Hastie, Robert Tibshirani and Andreas Buja (Journal of the American Statistical Association)
 | **[Publication]** [Discriminant Analysis by Gaussian Mixtures](https://rss.onlinelibrary.wiley.com/doi/10.1111/j.2517-6161.1996.tb02073.x) by Trevor Hastie and Robert Tibshirani (Journal of the Royal Statistical Society)
+| **[Publication]** [Diagnosis of Multiple Cancer Types by Shrunken Centroids of Gene Expression](https://pubmed.ncbi.nlm.nih.gov/12011421/) by Robert Tibshirani, Trevor Hastie, Balasubramanian Narasimhan and Gilbert Chu (Proceedings of the National Academy of Sciences of the United States of America)
 | **[Publication]** [Support Vector Regression Machines](http://www.cs.cmu.edu/~pakyan/compbio/references/Drucker_NIPS_1996.pdf) by Harris Drucker, Chris Burges, Linda Kaufman, Alex Smola and Vladimir Vapnik (Advances in Neural Information Processing Systems)
 | **[Publication]** [Nearest Neighbor Pattern Classification](https://ieeexplore.ieee.org/document/1053964) Thomas Cover and Peter Hart (IEEE Transactions on Information Theory)
 | **[Publication]** [Classification and Regression Trees](https://www.semanticscholar.org/paper/Classification-and-Regression-Trees-Breiman-Friedman/8017699564136f93af21575810d557dba1ee6fc6) by Leo Breiman, Jerome Friedman, Richard Olshen, and Charles Stone (Computer Science)
