@@ -3082,6 +3082,7 @@ print(ROCCurveAUC_Summary, row.names=FALSE)
 | **[Publication]** [The Use of Multiple Measurements in Taxonomic Problems](https://www.semanticscholar.org/paper/THE-USE-OF-MULTIPLE-MEASUREMENTS-IN-TAXONOMIC-Fisher/ab21376e43ac90a4eafd14f0f02a0c87502b6bbf) by Ronald Fisher (Annals of Human Genetics)
 | **[Publication]** [Support Vector Regression Machines](http://www.cs.cmu.edu/~pakyan/compbio/references/Drucker_NIPS_1996.pdf) by Harris Drucker, Chris Burges, Linda Kaufman, Alex Smola and Vladimir Vapnik (Advances in Neural Information Processing Systems)
 | **[Publication]** [Classification and Regression Trees](https://www.semanticscholar.org/paper/Classification-and-Regression-Trees-Breiman-Friedman/8017699564136f93af21575810d557dba1ee6fc6) by Leo Breiman, Jerome Friedman, Richard Olshen, and Charles Stone (Computer Science)
+| **[Publication]** [Unbiased Recursive Partitioning: A Conditional Inference Framework](https://www.tandfonline.com/doi/abs/10.1198/106186006X133933) by Torsten Hothorn, Kurt Hornik and Achim Zeileis
 | **[Publication]** [C4.5: Programs for Machine Learning](https://link.springer.com/article/10.1007/BF00993309) by Ross Quinlan
 | **[Publication]** [Random Forest ](https://link.springer.com/article/10.1023/A:1010933404324) by Leo Breiman (Machine Learning)
 | **[Publication]** [Bagging Predictors](https://link.springer.com/article/10.1007/BF00058655) by Leo Breiman (Machine Learning)
