@@ -2279,6 +2279,8 @@ SVM_P_Test_ROC <- roc(response = SVM_P_Test$SVM_P_Observed,
 
 ###  1.5.10 K-Nearest Neighbors (KNN)
 |
+| [K-Nearest Neighbors](https://ieeexplore.ieee.org/document/1053964) uses proximity to make predictions about the class grouping of an individual data point. The algorithm examines the labels of a chosen number of data points surrounding a target data point given a distance-based similarity metric, in order to make a prediction about the class that the data point falls into. The process involves setting a value for the chosen number of neighbors, calculating the distance between the target point across all instances, sorting the calculated distances, obtaining the labels of the top entries and returning the prediction for the target point.
+|
 | **[A]** The k-nearest neighbors model was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
 | **[B]** The model contains 1 hyperparameter:
@@ -3085,11 +3087,13 @@ print(ROCCurveAUC_Summary, row.names=FALSE)
 | **[Article]** [Conditional Inference Trees in R Programming](https://www.geeksforgeeks.org/conditional-inference-trees-in-r-programming/) by Geeks for Geeks Team
 | **[Article]** [C5.0: An Informal Tutorial](https://www.rulequest.com/see5-unix.html) by RuleQuest Team
 | **[Article]** [What is Nearest Shrunken Centroid Classification?](https://www.tibshirani.su.domains/PAM/Rdist/howwork.html) by Rob Tibshirani
+| **[Article]** [K-Nearest Neighbors Algorithm](https://www.ibm.com/topics/knn#:~:text=The%20k-nearest%20neighbors%20algorithm%2C%20also%20known%20as%20KNN,about%20the%20grouping%20of%20an%20individual%20data%20point.) by IBM Team
 | **[Publication]** [The Origins of Logistic Regression](http://dx.doi.org/10.2139/ssrn.360300) by JS Cramer (Econometrics eJournal)
 | **[Publication]** [The Use of Multiple Measurements in Taxonomic Problems](https://www.semanticscholar.org/paper/THE-USE-OF-MULTIPLE-MEASUREMENTS-IN-TAXONOMIC-Fisher/ab21376e43ac90a4eafd14f0f02a0c87502b6bbf) by Ronald Fisher (Annals of Human Genetics)
 | **[Publication]** [Flexible Discriminant Analysis by Optimal Scoring](https://www.tandfonline.com/doi/abs/10.1080/01621459.1994.10476866) by Trevor Hastie, Robert Tibshirani and Andreas Buja (Journal of the American Statistical Association)
 | **[Publication]** [Discriminant Analysis by Gaussian Mixtures](https://rss.onlinelibrary.wiley.com/doi/10.1111/j.2517-6161.1996.tb02073.x) by Trevor Hastie and Robert Tibshirani (Journal of the Royal Statistical Society)
 | **[Publication]** [Support Vector Regression Machines](http://www.cs.cmu.edu/~pakyan/compbio/references/Drucker_NIPS_1996.pdf) by Harris Drucker, Chris Burges, Linda Kaufman, Alex Smola and Vladimir Vapnik (Advances in Neural Information Processing Systems)
+| **[Publication]** [Nearest Neighbor Pattern Classification](https://ieeexplore.ieee.org/document/1053964) Thomas Cover and Peter Hart (IEEE Transactions on Information Theory)
 | **[Publication]** [Classification and Regression Trees](https://www.semanticscholar.org/paper/Classification-and-Regression-Trees-Breiman-Friedman/8017699564136f93af21575810d557dba1ee6fc6) by Leo Breiman, Jerome Friedman, Richard Olshen, and Charles Stone (Computer Science)
 | **[Publication]** [Unbiased Recursive Partitioning: A Conditional Inference Framework](https://www.tandfonline.com/doi/abs/10.1198/106186006X133933) by Torsten Hothorn, Kurt Hornik and Achim Zeileis (Journal of Computational and Graphical Statistics)
 | **[Publication]** [C4.5: Programs for Machine Learning](https://link.springer.com/article/10.1007/BF00993309) by Ross Quinlan
