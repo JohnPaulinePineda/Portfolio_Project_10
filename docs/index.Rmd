@@ -1,5 +1,5 @@
 ---
-title: 'R : Modelling Dichotomous Categorical Responses for Prediction'
+title: 'Supervised Learning : Modelling Dichotomous Categorical Responses for Prediction'
 author: "John Pauline Pineda"
 date: "December 3, 2022"
 output: 
